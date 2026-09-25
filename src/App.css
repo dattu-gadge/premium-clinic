@@ -1166,3 +1166,598 @@ h2 em {
     flex-direction: column;
   }
 }
+
+/* =========================================================
+   VITALIS CARE - PREMIUM RESPONSIVE + ANIMATION UPGRADE
+   ========================================================= */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- Premium transitions ---------- */
+
+button,
+a,
+input,
+select,
+textarea {
+  transition:
+    color .25s ease,
+    background-color .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
+}
+
+/* ---------- Hero entrance ---------- */
+
+.hero-content {
+  animation: clinicHeroIn .85s cubic-bezier(.22,1,.36,1) both;
+}
+
+.hero-visual,
+.hero-card {
+  animation: clinicVisualIn 1s .12s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes clinicHeroIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes clinicVisualIn {
+  from {
+    opacity: 0;
+    transform: translateX(28px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* ---------- Section reveal ---------- */
+
+.section,
+.departments,
+.doctors,
+.treatments,
+.why,
+.appointment,
+.faq,
+.location,
+.emergency {
+  animation: sectionReveal .8s ease both;
+}
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Cards ---------- */
+
+.department-card,
+.doctor-card,
+.treatment-card,
+.why-card {
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.department-card:hover,
+.doctor-card:hover,
+.treatment-card:hover,
+.why-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(10,35,40,.10);
+}
+
+/* ---------- Icons ---------- */
+
+.department-icon,
+.treatment-icon,
+.why-icon {
+  transition:
+    transform .35s ease,
+    background-color .35s ease;
+}
+
+.department-card:hover .department-icon,
+.treatment-card:hover .treatment-icon,
+.why-card:hover .why-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* ---------- Doctor cards ---------- */
+
+.doctor-card {
+  overflow: hidden;
+}
+
+.doctor-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: currentColor;
+  transition: transform .35s ease;
+}
+
+.doctor-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Buttons ---------- */
+
+.primary-button:hover,
+.secondary-button:hover,
+.cta-button:hover {
+  transform: translateY(-3px);
+}
+
+.primary-button:hover {
+  box-shadow: 0 12px 28px rgba(15,107,115,.18);
+}
+
+/* ---------- Emergency section ---------- */
+
+.emergency {
+  position: relative;
+  overflow: hidden;
+}
+
+.emergency::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top: -150px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  animation: emergencyFloat 6s ease-in-out infinite;
+}
+
+@keyframes emergencyFloat {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-20px, 15px);
+  }
+}
+
+/* ---------- WhatsApp floating button ---------- */
+
+.whatsapp-float {
+  animation: whatsappPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 25px rgba(0,0,0,.14);
+  }
+
+  50% {
+    box-shadow:
+      0 10px 25px rgba(0,0,0,.14),
+      0 0 0 9px rgba(37,211,102,.08);
+  }
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-item {
+  transition:
+    border-color .25s ease,
+    background-color .25s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(15,107,115,.22);
+}
+
+.faq-question svg {
+  transition: transform .3s ease;
+}
+
+.faq-question.active svg {
+  transform: rotate(180deg);
+}
+
+/* ---------- Appointment form ---------- */
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    background-color .25s ease;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: #0f6b73;
+  box-shadow: 0 0 0 3px rgba(15,107,115,.08);
+  outline: none;
+}
+
+/* ---------- Slide to call ---------- */
+
+.slide-call {
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.slide-call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(10,35,40,.12);
+}
+
+.slide-call input[type="range"] {
+  cursor: grab;
+}
+
+.slide-call input[type="range"]:active {
+  cursor: grabbing;
+}
+
+/* ---------- Location ---------- */
+
+.location-card {
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(10,35,40,.09);
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 900px) {
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-visual,
+  .hero-card {
+    width: 100%;
+  }
+
+  .department-grid,
+  .doctor-grid,
+  .treatment-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .appointment-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .demo-bar {
+    padding: 7px 12px;
+    font-size: 7px;
+    letter-spacing: .08em;
+    text-align: center;
+  }
+
+  .header {
+    padding: 0 18px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 15px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    background: rgba(255,255,255,.98);
+    border-bottom: 1px solid rgba(10,35,40,.08);
+    box-shadow: 0 18px 35px rgba(10,35,40,.08);
+  }
+
+  .nav.open {
+    display: flex;
+    animation: mobileNavIn .3s ease both;
+  }
+
+  @keyframes mobileNavIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav button {
+    width: 100%;
+    padding: 13px 5px;
+    text-align: left;
+  }
+
+  .menu-button {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .hero {
+    padding: 68px 20px 75px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(46px, 14vw, 70px);
+    line-height: .94;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-visual,
+  .hero-card {
+    margin-top: 25px;
+  }
+
+  .section,
+  .departments,
+  .doctors,
+  .treatments,
+  .why,
+  .appointment,
+  .faq,
+  .location {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-heading {
+    width: 100%;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: .98;
+  }
+
+  .section-heading p {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .department-grid,
+  .doctor-grid,
+  .treatment-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .department-card,
+  .doctor-card,
+  .treatment-card,
+  .why-card {
+    min-height: auto;
+  }
+
+  .appointment-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .appointment-form {
+    padding: 24px 18px;
+  }
+
+  .appointment-form input,
+  .appointment-form select,
+  .appointment-form textarea {
+    min-height: 48px;
+  }
+
+  .appointment-form textarea {
+    min-height: 110px;
+  }
+
+  .emergency {
+    padding: 55px 20px;
+  }
+
+  .emergency-content {
+    width: 100%;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-map {
+    min-height: 300px;
+  }
+
+  .faq-list {
+    width: 100%;
+  }
+
+  .faq-question {
+    padding: 19px 0;
+    font-size: 12px;
+  }
+
+  .faq-answer {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .slide-call {
+    width: 100%;
+  }
+
+  .whatsapp-float {
+    right: 17px;
+    bottom: 17px;
+  }
+
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .header {
+    padding: 0 14px;
+  }
+
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .section,
+  .departments,
+  .doctors,
+  .treatments,
+  .why,
+  .appointment,
+  .faq,
+  .location {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 37px;
+  }
+
+  .appointment-form {
+    padding: 20px 15px;
+  }
+
+  .emergency {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    right: 13px;
+    bottom: 13px;
+  }
+}
+
+/* ---------- Touch devices ---------- */
+
+@media (hover: none) {
+
+  .department-card:hover,
+  .doctor-card:hover,
+  .treatment-card:hover,
+  .why-card:hover,
+  .location-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .primary-button:active,
+  .secondary-button:active,
+  .cta-button:active {
+    transform: scale(.98);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
